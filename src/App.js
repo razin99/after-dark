@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { Component } from "react";
 
-class MakePost extends Component {
+class ConfessionText extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +20,7 @@ class MakePost extends Component {
   render() {
     return (
       <form>
-        <input
+        <textarea
           type="text"
           placeholder="Make a confession..."
           value={this.state.text}
@@ -31,11 +31,22 @@ class MakePost extends Component {
   }
 }
 
+class Button extends Component {
+  render() {
+    return (
+      <div>
+        <button>Submit!</button>
+      </div>
+    );
+  }
+}
+
 function App() {
   return (
     <div>
-      <p>Test</p>
-      <MakePost />
+      <p>Confess here:</p>
+      <ConfessionText />
+      <Button />
     </div>
   );
 }
