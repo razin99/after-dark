@@ -1,27 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Nav } from "react-bootstrap";
-
-class NavBar extends Component {
-  render() {
-    return (
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="#">After Dark</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#">All posts</Nav.Link>
-            <Nav.Link href="#">Confess</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    );
-  }
-}
+import App from "./App";
+import { NavBar } from "./components/NavBar";
 
 ReactDOM.render(
   <React.StrictMode>
