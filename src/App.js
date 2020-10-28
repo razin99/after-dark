@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
-import { AllPosts } from "./AllPosts";
+import { AllPosts } from "./components/AllPosts";
+import { ConfessionForm } from "./components/ConfessionForm";
 
 const POSTS = [
   { text: "abcd", date: "2020-10-23T05:19:27.020+00:00", _id: "5f9261" },
@@ -14,6 +15,8 @@ function App() {
   return (
     <div>
       <AllPosts posts={POSTS} />
+      <p>Confess here:</p>
+      <ConfessionForm />
     </div>
   );
 }
