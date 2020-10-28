@@ -11,9 +11,10 @@ const POSTS = [
   { text: "qrst", date: "2020-10-27T05:19:27.020+00:00", _id: "5f9265" },
 ];
 
+
 function App() {
   return (
-    <div>
+    <div id="app">
       <AllPosts posts={POSTS} />
       <p>Confess here:</p>
       <ConfessionForm />
