@@ -21,13 +21,14 @@ export class ConfessionForm extends Component {
   }
 
   handleSubmit(event) {
+    let code = "";
     event.preventDefault();
     axios
       .post("http://localhost:5000/posts/add", {
         text: this.state.text,
       })
       .then((response) => {
-        console.log(response.data.code);
+        code = response.data.code;
       })
       .catch((err) => {
         console.log(err);
@@ -36,6 +37,7 @@ export class ConfessionForm extends Component {
     this.setState({
       text: "",
     });
+    console.log(code)
   }
 
   handleReset(event) {
