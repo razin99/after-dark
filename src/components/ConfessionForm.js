@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 export class ConfessionForm extends Component {
   constructor(props) {
@@ -21,6 +22,16 @@ export class ConfessionForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    axios
+      .post("http://localhost:5000/posts/add", {
+        text: this.state.text,
+      })
+      .then((response) => {
+        console.log(response.data.code);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     console.log(this.state.text);
     this.setState({
       text: "",
@@ -41,7 +52,8 @@ export class ConfessionForm extends Component {
           type="text"
           placeholder="Make a confession..."
           value={this.state.text}
-          onChange={this.handleTextChange} />
+          onChange={this.handleTextChange}
+        />
         <div>
           <button type="submit">Submit!</button>
           <button type="reset">Reset!</button>
