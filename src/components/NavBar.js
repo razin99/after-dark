@@ -9,8 +9,8 @@ export class NavBar extends Component {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#">All posts</Nav.Link>
-            <Nav.Link href="#">Confess</Nav.Link>
+            <Nav.Link href="/posts">All posts</Nav.Link>
+            <Nav.Link href="/">Confess</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

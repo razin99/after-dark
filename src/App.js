@@ -2,6 +2,10 @@ import "./App.css";
 import React from "react";
 import { AllPosts } from "./components/AllPosts";
 import { ConfessionForm } from "./components/ConfessionForm";
+import {
+  BrowserRouter as Router,
+  Route
+} from "react-router-dom";
 
 const POSTS = [
   { text: "abcd", date: "2020-10-23T05:19:27.020+00:00", _id: "5f9261" },
@@ -15,9 +19,15 @@ const POSTS = [
 function App() {
   return (
     <div id="app">
-      <AllPosts posts={POSTS} />
-      <p>Confess here:</p>
-      <ConfessionForm />
+      <Router>
+        <Route exact path="/">
+          <p>Confess here:</p>
+          <ConfessionForm />
+        </Route>
+        <Route exact path="/posts">
+          <AllPosts posts={POSTS} />
+        </Route>
+      </Router>
     </div>
   );
 }
