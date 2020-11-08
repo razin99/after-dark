@@ -76,18 +76,14 @@ export class RemovePost extends Component {
               <Modal.Header closeButton>
                 <Modal.Title>Deleted successfully</Modal.Title>
               </Modal.Header>
-              <Modal.Body>
-                👍👍👍
-              </Modal.Body>
+              <Modal.Body>👍👍👍</Modal.Body>
             </>
           ) : (
             <>
               <Modal.Header closeButton>
                 <Modal.Title>Invalid code</Modal.Title>
               </Modal.Header>
-              <Modal.Body>
-                If this is a mistake, contact the mods
-              </Modal.Body>
+              <Modal.Body>If this is a mistake, contact the mods</Modal.Body>
             </>
           )}
         </Modal>

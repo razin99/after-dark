@@ -35,7 +35,7 @@ export class ConfessionForm extends Component {
           code: response.data.code,
           show: true,
         });
-        console.log(this.state.code)
+        console.log(this.state.code);
       })
       .catch((err) => {
         console.log(err);
@@ -49,9 +49,13 @@ export class ConfessionForm extends Component {
     this.setState({ text: "" });
   }
 
-  handleClose() { this.setState({ show: false }) }
+  handleClose() {
+    this.setState({ show: false });
+  }
 
-  handleShow() { this.setState({ show: true }) }
+  handleShow() {
+    this.setState({ show: true });
+  }
 
   render() {
     return (
@@ -65,8 +69,12 @@ export class ConfessionForm extends Component {
             onChange={this.handleTextChange}
           />
           <div>
-            <button className="btn btn-primary" type="submit">Submit!</button>
-            <button className="btn btn-secondary" type="reset">Reset!</button>
+            <button className="btn btn-primary" type="submit">
+              Submit!
+            </button>
+            <button className="btn btn-secondary" type="reset">
+              Reset!
+            </button>
           </div>
         </form>
         <Modal

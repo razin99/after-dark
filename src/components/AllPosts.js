@@ -39,18 +39,20 @@ export class AllPosts extends Component {
 
     return (
       <>
-      { all.length === 0 ?
-      <h2>No posts</h2>
-      :
-        <table>
-          <thead>
-            <tr>
-              <th>All confessions:</th>
-            </tr>
-          </thead>
-          <tbody>{all}</tbody>
-        </table>
-      }
+        {all.length === 0 ? (
+          <div className="jumbotron">
+            <h1 className="display-4">No posts yet</h1>
+          </div>
+        ) : (
+          <table>
+            <thead>
+              <tr>
+                <th>All confessions:</th>
+              </tr>
+            </thead>
+            <tbody>{all}</tbody>
+          </table>
+        )}
       </>
     );
   }
