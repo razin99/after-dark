@@ -58,14 +58,15 @@ export class ConfessionForm extends Component {
       <>
         <form onSubmit={this.handleSubmit} onReset={this.handleReset}>
           <textarea
+            className="form-control"
             type="text"
             placeholder="Make a confession..."
             value={this.state.text}
             onChange={this.handleTextChange}
           />
           <div>
-            <button type="submit">Submit!</button>
-            <button type="reset">Reset!</button>
+            <button className="btn btn-primary" type="submit">Submit!</button>
+            <button className="btn btn-secondary" type="reset">Reset!</button>
           </div>
         </form>
         <Modal
