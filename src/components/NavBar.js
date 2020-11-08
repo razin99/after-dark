@@ -11,6 +11,7 @@ export class NavBar extends Component {
           <Nav className="mr-auto">
             <Nav.Link href="/posts">All posts</Nav.Link>
             <Nav.Link href="/">Confess</Nav.Link>
+            <Nav.Link href="/remove">Remove</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
