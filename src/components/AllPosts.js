@@ -38,14 +38,20 @@ export class AllPosts extends Component {
     });
 
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>All confessions:</th>
-          </tr>
-        </thead>
-        <tbody>{all}</tbody>
-      </table>
+      <>
+      { all.length === 0 ?
+      <h2>No posts</h2>
+      :
+        <table>
+          <thead>
+            <tr>
+              <th>All confessions:</th>
+            </tr>
+          </thead>
+          <tbody>{all}</tbody>
+        </table>
+      }
+      </>
     );
   }
 }

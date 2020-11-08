@@ -36,9 +36,14 @@ router.route("/add").post((req, res) => {
 // DELETE route -> remove post using callback code
 router.route("/remove/:code").delete((req, res) => {
   Post.findOneAndDelete({ callbackCode: req.params.code.toUpperCase() })
-    .then(() => {
-      console.log(`Deleted post with code ${req.params.code}`);
-      res.status(200).send("OK");
+    .then((deletedPost) => {
+      if (deletedPost) {
+        console.log(`Deleted post with code ${req.params.code}`);
+        res.status(200).send("OK");
+      } else {
+        console.log("Nope, can't find that");
+        res.status(404).send("Code not found");
+      }
     })
     .catch((err) => res.status(400).json({ error: err.code }));
 });
