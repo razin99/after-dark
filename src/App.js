@@ -2,6 +2,8 @@ import "./App.css";
 import React from "react";
 import { AllPosts } from "./components/AllPosts";
 import { ConfessionForm } from "./components/ConfessionForm";
+import { RemovePost } from "./components/RemovePost";
+
 import {
   BrowserRouter as Router,
   Route
@@ -18,6 +20,9 @@ function App() {
         </Route>
         <Route exact path="/posts">
           <AllPosts />
+        </Route>
+        <Route exact path="/remove">
+          <RemovePost />
         </Route>
       </Router>
     </div>
