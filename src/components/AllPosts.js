@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { Component } from "react";
+import { Card } from "react-bootstrap";
 
 export class AllPosts extends Component {
   constructor(props) {
@@ -29,11 +30,18 @@ export class AllPosts extends Component {
     this.state.posts.forEach((post) => {
       let date = new Date(Date.parse(post.date));
       all.push(
-        <tr key={post._id}>
-          <td>{post.text}</td>
-          <td>{date.toLocaleDateString()}</td>
-          <td>{date.toLocaleTimeString()}</td>
-        </tr>
+        <div className="mb-3">
+          <Card className="text-center" bg="dark" text="white">
+            <Card.Body>
+              <Card.Text>{post.text}</Card.Text>
+            </Card.Body>
+            <Card.Footer>
+              <small className="text-muted">
+                {date.toLocaleDateString()} {date.toLocaleTimeString()}
+              </small>
+            </Card.Footer>
+          </Card>
+        </div>
       );
     });
 
@@ -44,14 +52,7 @@ export class AllPosts extends Component {
             <h1 className="display-4">No posts yet</h1>
           </div>
         ) : (
-          <table>
-            <thead>
-              <tr>
-                <th>All confessions:</th>
-              </tr>
-            </thead>
-            <tbody>{all}</tbody>
-          </table>
+          <>{all}</>
         )}
       </>
     );
