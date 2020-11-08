@@ -15,7 +15,6 @@ function App() {
     <div id="app">
       <Router>
         <Route exact path="/">
-          <p>Confess here:</p>
           <ConfessionForm />
         </Route>
         <Route exact path="/posts">

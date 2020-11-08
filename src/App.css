@@ -6,3 +6,30 @@
   background-color: #343a40;
   color: white;
 }
+
+textarea {
+  border: none;
+}
+
+body {
+  background-color: black;
+}
+
+.form-control {
+  background-color: #343a40;
+  color: white;
+  border: none;
+}
+
+.form-control:focus {
+  outline: 0;
+  background-color: #343a40;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 97%);
+  color: white;
+  border: none;
+}
+
+.jumbotron {
+    background-color: #343a40;
+    color: white;
+}

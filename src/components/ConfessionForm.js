@@ -62,18 +62,18 @@ export class ConfessionForm extends Component {
       <>
         <form onSubmit={this.handleSubmit} onReset={this.handleReset}>
           <textarea
-            className="form-control"
+            className="form-control mb-3"
             type="text"
             placeholder="Make a confession..."
             value={this.state.text}
             onChange={this.handleTextChange}
           />
           <div>
-            <button className="btn btn-primary" type="submit">
-              Submit!
+            <button className="btn btn-primary mr-2" type="submit">
+              Submit
             </button>
             <button className="btn btn-secondary" type="reset">
-              Reset!
+              Reset
             </button>
           </div>
         </form>

@@ -55,7 +55,7 @@ export class RemovePost extends Component {
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <input
-              className="form-control"
+              className="form-control mb-3"
               type="text"
               placeholder="Enter code"
               onChange={this.handleTextChange}
